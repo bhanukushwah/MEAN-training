@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Show Details</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <button type="submit" ng-click="retrieve_data()">Show Details To Update</button>
+            <br><br>
+            <table align="center" border="1">
+                <tr>
+                    <th>Fisrt Name</th>
+                    <th>Last Name</th>
+                    <th>Contact</th>
+                    <th>Operation</th>
+                </tr>
+                <tr ng-repeat='data in receive_data'>
+                    <td>{{data.first_name}}</td>
+                    <td>{{data.last_name}}</td>
+                    <td>{{data.contact}}</td>
+                    <td align="center"><button><a ng-href="/update/{{data._id}}">Update</a></button> </td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My First Page</title>
+        <base href="/">
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
+        <!--JS-->
+        <script src="libs/angular/angular.min.js"></script>
+        <script src="libs/angular-route/angular-route.min.js"></script>
+        <!--Angular Custom-->
+        <script src="./js/controllers/AboutCtrl.js"></script>
+        <script src="./js/controllers/ContactCtrl.js"></script>
+        <script src="./js/controllers/HomeCtrl.js"></script>
+        <script src="./js/controllers/AddCtrl.js"></script>
+        <script src="./js/controllers/ShowCtrl.js"></script>
+        <script src="./js/controllers/UpdateCtrl.js"></script>
+        <script src="./js/controllers/DeleteCtrl.js"></script>
+        <script src="./js/services/AboutService.js"></script>
+        <script src="./js/angappRoute.js"></script>
+        <script src="./js/angapp.js"></script>
+        
+    </head>
+    <body ng-app="angularSPA">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">MB</a>
+                    <a href="www.google.com" class="navbar-brand">Google</a>
+                </div>
+                <ul class="navbar-nav auto">
+                    <li class="nav-item ">
+                        <a href="/home" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/add" class="nav-link">
+                            Register
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/show" class="nav-link">
+                            Details
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/update" class="nav-link">
+                            Update Details
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/delete" class="nav-link">
+                            Remove Details
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div ng-view></div>
+        </div>
+    </body>
+
+</html>

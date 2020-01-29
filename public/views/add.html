@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Register
+        </title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+                <h1>Register</h1><br><br>
+                <form method="POST" ng-submit="send_data()">
+                    <label for="first">First Name:</label>
+                    <input id="first" type="text" ng-pattern=" /^[A-Za-z]+$/" placeholder="Enter your first name" ng-model="form_data.first"   required><br><br>
+                    <label for="last">Last Name:</label>
+                    <input id="last" type="text" pattern="^\S+$" placeholder="Enter your last name" ng-model="form_data.last" required><br><br>
+                    <label for="contact">Contact No.:</label>
+                    <input id="contact" type="tel" pattern="[0-9]{10}" placeholder="Enter your Contact No" ng-model="form_data.contact" minlength="10" maxlength="10"  required><br><br>
+                    <button type="submit">Submit</button>
+        </div>
+    </body>
+</html>

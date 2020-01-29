@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Show Details</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <!--<button type="submit" ng-click="retrieve_data();">Show Details To Update</button>-->
+            <br><br>
+            <table align="center" border="1" ng-init="retrieve_data_ind()">
+                <tr>
+                    <th>Fisrt Name</th>
+                    <th>Last Name</th>
+                    <th>Contact</th>
+                    <th>Operation</th>
+                </tr>
+                <tr ng-repeat='data in receive_data_ind'>
+                    <td><input  ng-model="data.first_name" /></td>
+                    <td><input  ng-model="data.last_name" /></td>
+                    <td><input  ng-model="data.contact" /></td>
+                    <td align="center"><button ng-click="update_data(data._id)">Update</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>
